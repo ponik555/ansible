@@ -1,18 +1,6 @@
 # ansible
-## Четвертая лаабааа 
+## Четвертая лабораторная
 
->В чем мем всей ситуации?
->>Вот все задание, которо енам дали:
-
- + На серверах rrobin, web1, web2 установить nginx.
- + На серверах web1, web2 Nginx должен работать по порту 8080 и отдавать кастомную страницу, зайдя на которую можно понять на каком сервере вы находитесь.
- + На сервере rrobin Nginx должен обеспечить балансировку нагрузки серверов web1 и web2 в режиме round-robin. Вес каждого сервера одинаковый.
- + Установка и настройка всего ПО должна быть обеспечена Ansible-сценарием.
- + Все файлы по этому заданию выложить в Github и написать ReadMe со скринами работоспособности и инструкцию по запуску вашего Ansible-сценария
-> что я сделал? да вообще хз, оно само как-то
-
-## Tckb ns ytvyjuj negjq? nj vjlyj crjgbhjdfnm 
-### если ты немного(много тупой) то вот че надо сделать в этой штуке
 ## Usage
 
 This playbook will create a nginx rrobin balancing page for two pages (web1 and web2)
@@ -21,8 +9,8 @@ This playbook will create a nginx rrobin balancing page for two pages (web1 and 
 
 Before the installation we will need a custom CentOS7 virtual box image with SElinux disabled.
 
-### DON`T FORGET TO EDIT [VagrantFile](https://github.com/bob4inski/ansible/blob/main/lab4/Vagrantfile) with path to your ssh folder
-`ssh_pub_key = File.readlines("/home/robert/.ssh/id_rsa.pub").first.strip`
+### dont forget to edit[VagrantFile](https://github.com/ponik555/ansible/tree/master/lab4/.vagrant) with path to your ssh folder
+`ssh_pub_key = File.readlines("https://github.com/ponik555/ansible.git").first.strip`
 
 ## Installation
 
@@ -52,7 +40,5 @@ Different page:
 <a href="https://ibb.co/qWb7P8v"><img src="https://i.ibb.co/9VRcC07/vagrant-sec-page.png" alt="vagrant-sec-page" border="0"></a>
 
 ## Done
-
-You can get yourself a coffee! ☕
 
 
