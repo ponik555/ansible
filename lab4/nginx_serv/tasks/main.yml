@@ -1,0 +1,27 @@
+---
+- name: Install EPEL Repo from standard repo
+  yum:
+    name: epel-release
+    state: present
+- name: install first
+  yum:
+    name: nginx
+    state: latest
+  tags:
+      nginx-package
+      packeges
+- name: not copypast
+  copy:
+    src: nginxserv.conf
+    dest: /etc/nginx/nginx.conf
+  notify:
+    - restart nginx
+  tags:
+    - nginx-configuration
+- name: stop fw
+  systemd:
+    name: firewalld
+    state: stopped
+    enabled: no
+
+
